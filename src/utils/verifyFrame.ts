@@ -56,10 +56,10 @@ export function messageToFrameData(message: Message): FrameData {
     address: frameActionBody.address
       ? bytesToHex(frameActionBody.address)
       : undefined,
-    castId: {
+    castId: frameActionBody.castId ? {
       fid: Number(frameActionBody.castId?.fid),
       hash: bytesToHex(frameActionBody.castId?.hash!),
-    },
+    } : undefined,
     fid: Number(message.data?.fid!),
     messageHash: bytesToHex(message.hash),
     network: message.data?.network!,

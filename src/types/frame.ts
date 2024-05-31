@@ -152,7 +152,7 @@ export type FrameResponseFn = (
 export type FrameData = {
   address?: string | undefined
   buttonIndex?: 1 | 2 | 3 | 4 | undefined
-  castId: { fid: number; hash: string }
+  castId: { fid: number; hash: string } | undefined
   fid: number
   inputText?: string | undefined
   messageHash: string
